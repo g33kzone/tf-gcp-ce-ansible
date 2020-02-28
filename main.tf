@@ -20,7 +20,8 @@ resource "google_compute_instance" "default" {
       }
   }
 
-  metadata_startup_script = "sudo apt-get update; sudo apt-get install -yq build-essential python-pip rsync; sudo apt-get install ansible"
+ // metadata_startup_script = "sudo apt-get update; sudo apt-get install -yq build-essential python-pip rsync; sudo apt-get install ansible"
+  metadata_startup_script = "sudo apt update; sudo apt install ansible -y"
 
   network_interface {
       network = "default"
